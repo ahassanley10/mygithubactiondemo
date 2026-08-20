@@ -10,9 +10,8 @@ jobs:
       run: apt install php -y
     - name: Check version
       run: php --version
-    
   job2: 
-      runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04
     steps:
     - name: install php package
       run: |
