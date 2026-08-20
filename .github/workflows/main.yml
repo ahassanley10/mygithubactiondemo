@@ -1,0 +1,32 @@
+name: my first workflow
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: update apt repository
+      run: apt update
+    - name: install php package
+      run: apt install php -y
+    - name: Check version
+      run: php --version
+    
+  job2: 
+      runs-on: ubuntu-22.04
+    steps:
+    - name: install php package
+      run: |
+        apt update
+        apt install php -y
+        php --version
+  job3:
+    run-on: ubuntu-latest
+    steps:
+    - name: install python
+    uses: actions/setup-python@v7
+  with:
+    python-version: '3.13'
+        
+    
+  
+  
